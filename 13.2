@@ -1,0 +1,21 @@
+nama = input("Masukkan nama lengkap: ")
+nim = input("Masukkan NIM: ")
+alamat = input("Masukkan alamat: ")
+
+data = (nama, nim, alamat)
+
+print(f"\nNIM : {data[1]}")
+print(f"NAMA : {data[0]}")
+print(f"ALAMAT : {data[2]}")
+print()
+
+nim_tuple = tuple(data[1])
+print(f"NIM: {nim_tuple}")
+
+nama_depan = data[0].split()[0]
+nama_depan_tuple = tuple(nama_depan[1:])
+print(f"NAMA DEPAN: {nama_depan_tuple}")
+
+nama_split = data[0].split()
+nama_terbalik_tuple = tuple(nama_split[::-1])
+print(f"NAMA TERBALIK: {nama_terbalik_tuple}")

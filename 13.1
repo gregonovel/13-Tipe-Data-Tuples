@@ -1,0 +1,14 @@
+data = input("Masukkan anggota tuple (pisahkan dengan spasi): ")
+
+try:
+    t = tuple(int(x) for x in data.split())
+except:
+    print("Input tidak valid. Pastikan yang dimasukkan adalah angka.")
+    exit()
+
+if len(t) == 0:
+    hasil = True
+else:
+    hasil = all(x == t[0] for x in t)
+
+print(hasil)
